@@ -8,3 +8,23 @@
 # в порядке
 # Ввод:                                       Вывод:
 # пара-ра-рам рам-пам-папам па-ра-па-дам      Парам пам-пам
+
+
+def vinny_pooh(string):
+    list = []
+    sum = 0
+    for item in string:
+        count = 0
+        for i in item:
+            if i in 'аеуыоэяию':
+                count += 1
+        list.append(count)
+    for i in list:
+        sum += i
+    if sum/len(list) == list[0]:
+        print('Парам пам-пам')
+    else: print('Пам парам')
+
+string = input("Наберите рифму: ").split()
+# string = "пара-ра-рам рам-пам-папам па-ра-па-дам".split()
+vinny_pooh(string)
